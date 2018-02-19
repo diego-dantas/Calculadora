@@ -1,0 +1,71 @@
+
+
+#box {
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #808080;
+    border-radius: 25px;
+}
+
+
+#boxCalc {
+    margin: 20px auto;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid #808080;
+    border-radius: 25px;
+    width: 360px;
+}
+
+#boxRel{
+    margin: 20px auto;
+}
+
+#boxRel h3{
+    text-align: center;
+}
+
+#boxRel button{
+    margin-top: 35px;
+}
+
+#boxRel input{
+    width: 180px;
+}
+
+#boxAccess {
+    margin: 50px auto;
+    text-align: center;
+}
+
+#logo img{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50px; 
+    height: 50px;
+}
+
+#logo p {
+    margin-top: 10px;
+    color:#fff;
+}
+
+#logo button {
+    margin-left: 20px;
+}
+
+.userLogin {
+    color: #fff;
+}
+
+.btnCalc button {
+    margin: 10px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+#conta {
+    height: 50px;
+}
