@@ -48,13 +48,20 @@
         $create->bindValue(":s", $s);
         $create->execute();
 
-        if($create->rowCount() > 0){
-            $createStatus['create'] = true;
-            $loginStatus['name'] = $n;
-            $loginStatus['user'] = $u;
+        $login = $pdo->prepare("select * from usuarios u where u.usuario =:us and u.senha =:se");
+        $login->bindValue(":us", $u);
+        $login->bindValue(":se", $s);
+        $login->execute();
 
-            $_SESSION['login'] = $u;
-            $_SESSION['name']  = $n;
+        if($create->rowCount() > 0 && $login->rowCount() > 0){
+            $row = $login->fetch(PDO::FETCH_ASSOC);
+            $createStatus['create'] = true;
+            $loginStatus['name'] = $row['nome'];
+            $loginStatus['user'] = $row['usuario'];
+
+            $_SESSION['id']    = $row['id'];
+            $_SESSION['login'] = $row['usuario'];
+            $_SESSION['name']  = $row['nome'];
         }else{
             unset ($_SESSION['login']);
             unset ($_SESSION['name']);
